@@ -2,24 +2,34 @@
 {
     internal class Program
     {
-        SupportingClass sp = new SupportingClass();
+        
         static void Main(string[] args)
         {
-            double playerTurn = 1;
-            
-            
+            SupportingClass sc = new SupportingClass();
+
+            string currentPlayer = "X";
+            string[] board = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+
             Console.WriteLine("Welcome to Tic-Tac-Toe!");
             Console.WriteLine("Board initialized: ");
 
 
-            string[] board = ["1","2","3","4","5","6","7","8","9"];
-
-            // print the tic-tac-toe board with numbers in their respective places
-            if (playerTurn == 1)
+            do
             {
-                Console.WriteLine("Player 1, please choose the number that corresponds to the locaiton you want to select.");
+                // print the tic-tac-toe board with numbers in their respective places
+                if (currentPlayer == "X")
+                {
+                    Console.WriteLine("Player 1 (X), please input your location choice.");
+                    sc.PrintBoard(board);
+                }
+                else if (currentPlayer == "O")
+                {
+                    Console.WriteLine("Player 2 (O), please input your location choice.");
+                    sc.PrintBoard(board);
+                }
+            } while (sc.CheckResult);
 
-            }
+            
 
 
 
