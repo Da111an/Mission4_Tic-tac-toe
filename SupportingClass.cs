@@ -8,7 +8,7 @@ namespace Mission4
         // It returns "X" or "O" if someone won, or "" if there is no winner yet.
         public string CheckWinner(string[] board)
         {
-            // This is all of our possible winning combinations
+            // All possible winning combinations (rows, columns, diagonals)
             int[][] winLines = new int[][]
             {
                 new int[] { 0, 1, 2 }, // Row 1
@@ -28,10 +28,10 @@ namespace Mission4
                 int b = line[1];
                 int c = line[2];
 
-                // If all three spots match and are not empty, we found the winner
+                // If all three spots match and are not empty, we found a winner
                 if (board[a] == board[b] && board[b] == board[c] && board[a] != "")
                 {
-                    return board[a]; // returns "X" or "O"
+                    return board[a]; // Returns "X" or "O"
                 }
             }
         
