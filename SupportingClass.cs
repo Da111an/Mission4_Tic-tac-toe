@@ -34,16 +34,18 @@ namespace Mission4
                     return board[a]; // returns "X" or "O"
                 }
             }
-
+        
             // If no winning line was found, return empty string (no winner)
             return "";
+
+        }
         public void PrintBoard(string[] board)
         {
             Console.WriteLine($"{board[0]} | {board[1]} | {board[2]}");
             Console.WriteLine("---+---+---");
             Console.WriteLine($"{board[3]} | {board[4]} | {board[5]}");
             Console.WriteLine("---+---+---");
-            Console.WriteLine($"{board[6]} | {board[7]} | {board[8]}");
+            Console.WriteLine($"{board[6]} | {board[7]} | {board[8]}\n");
         }
     }
 }
